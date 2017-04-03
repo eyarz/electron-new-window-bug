@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <h1>I'm a new window with window.opener object!</h1>
+</head>
+<body>
+    What do you want to do now?
+    <br>
+    <button onclick="var sameDomain = window.open('http://127.0.0.1:8080/newWindow.html'); console.log(sameDomain)">same-domain</button>
+    <button onclick="var differentDomain = window.open('http://www.google.com'); console.log(differentDomain)">different-domain</button>
+
+</body>
+</html>

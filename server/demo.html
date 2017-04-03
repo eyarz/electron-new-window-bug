@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <h1>window.opener in same domain and different domain demo</h1>
+</head>
+<body>
+    Open a new window from:
+    <br>
+    <button onclick="var sameDomain = window.open('http://127.0.0.1:8080/newWindow.html'); console.log(sameDomain)">same-domain</button>
+    <button onclick="var differentDomain = window.open('http://www.google.com'); console.log(differentDomain)">different-domain</button>
+
+</body>
+</html>
