@@ -1,13 +1,14 @@
 const path = require('path');
-let electronSrc = path.join(__dirname, 'node_modules/electron/dist')
-let electronExec = (/^win/.test(process.platform)) ? path.join(electronSrc, 'electron.exe') : path.join(electronSrc, 'electron.sh')
-console.log('electron executable : ' + electronExec)
-
+const fs = require('fs');
 const exec = require('child_process').execFile;
+
+let electronSrc = path.join(__dirname, 'node_modules/electron/dist');
+let electronExec = (/^win/.test(process.platform)) ? path.join(electronSrc, 'electron.exe') : path.join(electronSrc, 'Electron.app/Contents/MacOS/Electron');
+console.log('electron executable : ' + electronExec);
 
 (() => {
     exec(electronExec, ['./'], function(err, data) {
-        if (err) new Error(err)
+        if (err) new Error(err);
         console.log(data.toString());
     });
-})()
+})();

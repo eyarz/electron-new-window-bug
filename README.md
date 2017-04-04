@@ -11,12 +11,12 @@ should be used and then all the window objects should be passed to the new windo
 Due to a [bug in electron](https://github.com/electron/electron/issues/8100), it won't work if the new window is from a different domain.
 
 ### How to reproduce:
-* Copy the repository
+* Copy repository
 * Install dependencies
-* cd to your directory
+* cd into the directory
 * Run electron
 ```
-$ electron ./
+$ npm run demo
 ```
 * Click on "different-domain" button
 * Open developer tools in the new window
